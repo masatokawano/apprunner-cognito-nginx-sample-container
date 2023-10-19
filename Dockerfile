@@ -8,8 +8,8 @@ ARG OAUTH2_PROXY_VERSION=7.4.0
 WORKDIR /app
 
 RUN set -x && \
-    apt-get -y install wget gnupg && \
     apt-get update && \
+    apt-get -y install wget gnupg && \
     wget https://nginx.org/keys/nginx_signing.key && \
     cat nginx_signing.key | apt-key add - && \
     apt-get -qq update && \
